@@ -1,0 +1,23 @@
+img {
+  display: block;
+}
+.body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--header-text-color);
+  background: var(--primary-title-color);
+}
+
+.navigation-list,
+.features-list,
+.team-list,
+.work-list,
+.footer-contacts-list,
+.filter-list,
+.projects-list,
+.contacts-list,
+.team-social-list,
+.customers-item,
+.join-item {
+  list-style: none;
+  text-decoration: none;
+}
