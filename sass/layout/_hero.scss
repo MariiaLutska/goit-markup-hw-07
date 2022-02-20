@@ -46,9 +46,10 @@
   transition-property: background-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic);
-}
-
-.hero-button:hover,
-.hero-button:focus {
+  &:hover,
+  &:focus {
   background-color: var(--focus-button-color);
 }
+}
+
+
