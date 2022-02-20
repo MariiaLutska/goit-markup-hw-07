@@ -7,11 +7,11 @@
   align-items: center;
 }
 
-.navigation-list {
+.navigation__list {
   display: flex;
 }
 
-.navigation-item {
+.navigation__item {
   display: block;
   &:not(:last-child) {
     margin-right: 50px;
@@ -39,7 +39,7 @@
   }
 }
 
-.navigation-link {
+.navigation__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
@@ -78,12 +78,14 @@
   }
 }
 
-.contacts-list {
+.contacts {
   display: flex;
   margin-left: auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.contacts-link {
+.contacts__link {
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -108,13 +110,7 @@
   }
 }
 
-.contacts-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contacts-item {
+.contacts__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,7 +119,7 @@
   }
 }
 
-.contacts-icon {
+.contacts__icon {
   justify-content: center;
   align-items: center;
   fill: currentColor;

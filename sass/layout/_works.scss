@@ -1,4 +1,4 @@
-.work {
+.work__name {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
@@ -8,23 +8,23 @@
   margin-bottom: 50px;
 }
 
-.work-list {
+.work__list {
   display: flex;
 }
 
-.work-foto {
+.work__foto {
   display: flex;
   width: 370px;
   &:not(:last-child) {
-  margin-right: 30px;
-}
+    margin-right: 30px;
+  }
 }
 
-.work-wrap {
+.work__wrap {
   position: relative;
 }
 
-.work-title {
+.work__title {
   position: absolute;
   bottom: 0;
   left: 0;

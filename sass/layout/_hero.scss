@@ -16,7 +16,7 @@
   flex-grow: 1;
 }
 
-.hero-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -27,7 +27,7 @@
   color: var(--hero-title-color);
 }
 
-.hero-button {
+.hero__button {
   font-family: inherit;
   font-weight: bold;
   font-size: 16px;
@@ -48,8 +48,6 @@
   transition-timing-function: var(--cubic);
   &:hover,
   &:focus {
-  background-color: var(--focus-button-color);
+    background-color: var(--focus-button-color);
+  }
 }
-}
-
-

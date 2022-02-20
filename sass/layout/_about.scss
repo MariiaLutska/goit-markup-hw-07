@@ -4,7 +4,7 @@
 
 .features {
   background: var(--primary-title-color);
-  &-list {
+  &__list {
     display: flex;
     justify-content: space-between;
 
@@ -30,7 +30,7 @@
   }
 }
 
-.features-item {
+.features__item {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
