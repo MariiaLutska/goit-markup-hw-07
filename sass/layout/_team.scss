@@ -54,12 +54,12 @@
   margin-bottom: 16px;
 }
 
-.team-social-list {
+.team-social__list {
   display: flex;
   justify-content: center;
 }
 
-.team-social-link {
+.team-social__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -79,10 +79,10 @@
   }
 }
 
-.team-social-icon {
+.team-social__icon {
   fill: currentColor;
 }
 
-.team-social-item + .team-social-item {
+.team-social__item + .team-social__item {
   margin-left: 10px;
 }

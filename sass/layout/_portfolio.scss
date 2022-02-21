@@ -4,13 +4,13 @@
   margin: 0;
 }
 
-.filter-list {
+.filter__list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.filter-button {
+.filter__button {
   display: flex;
   padding: 6px 22px;
 
@@ -37,14 +37,14 @@
   }
 }
 
-.current-button {
+.filter__button--current {
   color: var(--button-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter-item {
+.filter__item {
   margin-right: 8px;
   transition-property: background-color, box-shadow;
   transition-duration: var(--duration);
@@ -61,14 +61,14 @@
   }
 }
 
-.project-content {
+.project__content {
   padding: 20px 24px;
   border: 1px solid var(--project-content);
   box-sizing: border-box;
   border-top: 0;
 }
 
-.project-name {
+.project__name {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -76,7 +76,7 @@
   color: var(--header-text-color);
 }
 
-.project-filter {
+.project__filter {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.87;
@@ -84,12 +84,12 @@
   color: var(--main-text-color);
 }
 
-.projects-list {
+.project__list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.project-item {
+.project__item {
   margin-bottom: 30px;
   margin-right: 30px;
   width: 370px;
@@ -104,7 +104,7 @@
   }
 }
 
-.project-item-link {
+.project__link {
   text-decoration: none;
   transition-property: box-shadow;
   transition-duration: var(--duration);
@@ -120,12 +120,12 @@
   }
 }
 
-.project-wrap {
+.project__wrap {
   position: relative;
   overflow: hidden;
 }
 
-.project-bottom-text {
+.project__bottom--text {
   position: absolute;
   top: 0;
   left: 0;
@@ -139,11 +139,11 @@
   height: 100%;
   transform: translateY(101%);
   transition: transform var(--duration) var(--cubic);
-  .project-item-link:hover & {
+  .project__link:hover & {
     transform: translateY(0);
   }
 
-  .project-item-link:focus & {
+  .project__link:focus & {
     transform: translateY(0);
   }
 }
