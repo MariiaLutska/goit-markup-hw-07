@@ -17,9 +17,10 @@
 }
 
 .customers__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .customers__link {

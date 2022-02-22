@@ -1,5 +1,7 @@
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .body {
   font-family: 'Roboto', sans-serif;
@@ -14,7 +16,7 @@ img {
 .filter__list,
 .project__list,
 .contacts,
-.team-social__list,
+.team__social-list,
 .customers__item,
 .join__item {
   list-style: none;

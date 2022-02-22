@@ -30,17 +30,19 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul {
   margin: 0;
 }
 
 ul {
-  margin: 0;
   padding: 0;
 }
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .body {
@@ -57,7 +59,7 @@ img {
 .filter__list,
 .project__list,
 .contacts,
-.team-social__list,
+.team__social-list,
 .customers__item,
 .join__item {
   list-style: none;
@@ -80,13 +82,156 @@ img {
   justify-content: space-between;
 }
 
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+}
+
 .section {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
-button {
+.work {
+  padding-top: 0;
+}
+
+button, .hero__button, .mailing__btn, .filter__button, .modal__button, .modal__btn-submit {
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.hero__button {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--button-color);
+  background: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  margin: auto;
+  padding: 10px 32px;
+  transition-property: background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic);
+}
+
+.hero__button:hover, .hero__button:focus {
+  background-color: var(--focus-button-color);
+}
+
+.mailing__btn {
+  width: 200px;
+  height: 50px;
+  display: inline-flex;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--button-color);
+  background-size: contain;
+  padding-left: 29px;
+  padding-right: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition-property: background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic);
+}
+
+.mailing__btn:focus {
+  background-color: var(--focus-button-color);
+}
+
+.filter__button {
+  padding: 6px 22px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--header-text-color);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic);
+}
+
+.filter__button:hover, .filter__button:focus {
+  color: var(--button-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter__button--current {
+  color: var(--button-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.modal__button {
+  width: 30px;
+  height: 30px;
+  background-color: var(--modal-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: var(--title-color);
+}
+
+.modal__button:hover, .modal__button:focus {
+  color: var(--accent-color);
+}
+
+.modal__button-icon--close {
+  color: var(--title-color);
+}
+
+.modal__button-icon--close:hover, .modal__button-icon--close:focus {
+  color: var(--accent-color);
+}
+
+.modal__btn-submit {
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--button-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  margin: auto;
+  padding: 10px 55px 10px 56px;
+  transition-property: background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic);
+}
+
+.modal__btn-submit:focus {
+  background-color: var(--focus-button-color);
 }
 
 .backdrop {
@@ -195,34 +340,6 @@ button {
   fill: var(--accent-color);
 }
 
-.modal__icon--close {
-  color: var(--title-color);
-}
-
-.modal__icon--close:hover, .modal__icon--close:focus {
-  color: var(--accent-color);
-}
-
-.modal__btn {
-  width: 30px;
-  height: 30px;
-  background-color: var(--modal-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  border-radius: 50%;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  color: var(--title-color);
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.modal__btn:hover, .modal__btn:focus {
-  color: var(--accent-color);
-}
-
 .form-user-text {
   margin-bottom: 20px;
 }
@@ -231,7 +348,7 @@ button {
   margin-bottom: 30px;
 }
 
-.modal__text--check {
+.modal__text-check {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -241,7 +358,7 @@ button {
   justify-content: center;
 }
 
-.modal__text--check::before {
+.modal__text-check::before {
   content: '';
   width: 12px;
   height: 11px;
@@ -252,11 +369,11 @@ button {
   cursor: pointer;
 }
 
-.modal--check:focus + .modal__text--check::before {
+.modal__check:focus + .modal__text-check::before {
   border-color: var(--accent-color);
 }
 
-.modal--check:checked + .modal__text--check::before {
+.modal__check:checked + .modal__text-check::before {
   background-image: url(../images/iconcheck.svg);
   background-origin: border-box;
   background-size: contain;
@@ -266,32 +383,6 @@ button {
 .modal__document {
   color: var(--accent-color);
   margin-left: 3px;
-}
-
-.modal__btn--submit {
-  width: 200px;
-  height: 50px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--button-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  margin: auto;
-  padding: 10px 55px 10px 56px;
-  transition-property: background-color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic);
-}
-
-.modal__btn--submit:focus {
-  background-color: var(--focus-button-color);
 }
 
 .is-hidden {
@@ -304,7 +395,6 @@ button {
   padding-top: 24px;
   padding-bottom: 25px;
   margin-bottom: 0;
-  margin-right: 93px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: bold;
@@ -317,19 +407,67 @@ button {
 
 .logo-link--light-theme {
   color: var(--header-text-color);
+  margin-right: 93px;
 }
 
 .logo-link--dark-theme {
   color: var(--logo-two-color);
 }
 
-.header {
-  border-bottom: 1px solid var(--border-color);
+.logo-link.footer__logo {
+  display: inline-block;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-right: 0;
 }
 
-.main-nav {
+.team__social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic);
+}
+
+.team__social-link {
+  color: var(--focus-icon-color);
+  transition-property: color, background-color;
+}
+
+.team__social-link:hover, .team__social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--footer-contacts-color);
+  outline: none;
+}
+
+.social-icon {
+  fill: currentColor;
+}
+
+.team__social-item + .team__social-item {
+  margin-left: 10px;
+}
+
+.join__social-link {
+  color: var(--footer-contacts-color);
+  transition-property: background-color;
+}
+
+.join__social-link:hover, .join__social-link:focus {
+  background-color: var(--accent-color);
+  outline: none;
+}
+
+.header {
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navigation__list {
@@ -456,35 +594,6 @@ button {
   text-transform: uppercase;
   margin-bottom: 30px;
   color: var(--hero-title-color);
-}
-
-.hero__button {
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--button-color);
-  background: var(--accent-color);
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  margin: auto;
-  padding: 10px 32px;
-  transition-property: background-color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic);
-}
-
-.hero__button:hover, .hero__button:focus {
-  background-color: var(--focus-button-color);
-}
-
-.our-works {
-  padding-top: 0;
 }
 
 .features {
@@ -658,38 +767,6 @@ button {
   margin-bottom: 16px;
 }
 
-.team-social__list {
-  display: flex;
-  justify-content: center;
-}
-
-.team-social__link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--focus-icon-color);
-  transition-property: color, background-color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic);
-}
-
-.team-social__link:hover, .team-social__link:focus {
-  background-color: var(--accent-color);
-  color: var(--footer-contacts-color);
-  outline: none;
-}
-
-.team-social__icon {
-  fill: currentColor;
-}
-
-.team-social__item + .team-social__item {
-  margin-left: 10px;
-}
-
 .customers__title {
   font-weight: bold;
   font-size: 36px;
@@ -707,9 +784,11 @@ button {
 }
 
 .customers__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-right: 30px;
+}
+
+.customers__item:last-child {
+  margin-right: 0;
 }
 
 .customers__link {
@@ -747,21 +826,8 @@ button {
   padding-bottom: 60px;
 }
 
-.footer__container {
-  display: flex;
-  align-items: baseline;
-  justify-content: start;
-}
-
 .footer__address {
   margin-right: 70px;
-}
-
-.logo-link.footer__logo {
-  display: inline-block;
-  padding: 0;
-  margin-bottom: 20px;
-  margin-right: 0;
 }
 
 .footer-contacts__list {
@@ -835,28 +901,6 @@ button {
   justify-content: center;
 }
 
-.join__social-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--footer-contacts-color);
-  transition-property: background-color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic);
-}
-
-.join__social-link:hover, .join__social-link:focus {
-  background-color: var(--accent-color);
-  outline: none;
-}
-
-.join__social-icon {
-  fill: currentColor;
-}
-
 .mailing__title {
   font-weight: bold;
   font-size: 14px;
@@ -884,35 +928,6 @@ button {
   border-radius: 4px;
 }
 
-.mailing__btn {
-  width: 200px;
-  height: 50px;
-  display: inline-flex;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: var(--button-color);
-  background-size: contain;
-  padding-left: 29px;
-  padding-right: 28px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transition-property: background-color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic);
-}
-
-.mailing__btn:focus {
-  background-color: var(--focus-button-color);
-}
-
 .mailing__icon {
   margin-left: 10px;
 }
@@ -927,36 +942,6 @@ button {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-}
-
-.filter__button {
-  display: flex;
-  padding: 6px 22px;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--header-text-color);
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  transition-property: color, background-color, box-shadow;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--cubic);
-}
-
-.filter__button:hover, .filter__button:focus {
-  color: var(--button-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.filter__button--current {
-  color: var(--button-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter__item {
