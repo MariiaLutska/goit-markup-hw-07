@@ -95,6 +95,8 @@ button {
 .modal__button {
   @extend button;
 
+  position: absolute;
+  flex-direction: row;
   width: 30px;
   height: 30px;
   background-color: var(--modal-color);
@@ -105,18 +107,28 @@ button {
   right: 8px;
   top: 8px;
   color: var(--title-color);
+  outline: none;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    outline: none;
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--cubic);
   }
 }
 
 .modal__button-icon--close {
-  color: var(--title-color);
+  fill: var(--title-color);
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    fill: var(--accent-color);
+    outline: none;
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--cubic);
+    display: none;
   }
 }
 
